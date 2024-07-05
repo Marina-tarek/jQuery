@@ -113,5 +113,15 @@ form span{
 .btn:hover {
     background-color: rgba(214, 46, 51,0.7);   
     color: white;
-    
+}
+.social-media ul li{
+    border: 1px solid #999 ;
+    width: 40px;
+    height: 40px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.social-media ul li a{
+    color:  #999;
 }
