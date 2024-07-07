@@ -302,3 +302,33 @@ form span {
 .form-control::placeholder {
     color: #777;
 }
+
+/* @media (max-width: 768px){
+
+} */
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 40px;
+    }
+
+    .pd {
+        margin: 20px 0;
+        padding: 5px;
+    }
+
+    .leftMenu ul li {
+        font-size: 20px;
+    }
+
+    #singer {
+        width: 60%;
+    }
+#duration .layer .container, #contact .container{
+    width: 80%;
+}
+    .time {
+        padding: 30px;
+    }
+}
+
