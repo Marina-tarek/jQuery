@@ -9,7 +9,7 @@ $(function () {
         })
     })
 })
-// smooth in scroll
+//====> smooth in scroll
 // 1- ====$(document).on('click', 'a[href^="#"]', function (event) { event.preventDefault();
 //     $('html, body').animate({scrollTop: $($.attr(this, 'href')).offset().top}, 2000); });
 // 2-
@@ -18,16 +18,16 @@ $('a[href^="#"]').on("click", function (e) {
     let sectionOffset = $(aHref).offset().top
     $('body,html').animate({ scrollTop: sectionOffset }, 2000)
 })
-$(".color-box").on("click", function (e) {
-    let currentColorBg = $(e.target).css("background-color")   //color
-    $("h2,h3,span,a,.singerDesc").css('color', currentColorBg)
-})
-// side color
+
+//====> side color
 $('aside i').on("click", function () {
     $('.sidebar-color').animate({ width: 'toggle', paddingInline: 'toggle' }, 1000)
     ///// another method give sidebar-color outer div to work on width only
 })
-
+$(".color-box").on("click", function (e) {
+    let currentColorBg = $(e.target).css("background-color")   //color
+    $("h2,h3,span,a,.singerDesc").css('color', currentColorBg)
+})
 //====> side menu
 $(".openSideList").on("click", function () {
     $(".leftMenu").animate({ width: "22%" }, 1000)
@@ -38,13 +38,12 @@ $(".closeBtn").on("click", function () {
     $(".homeSection").animate({ width: "100%" }, 1000)
 })
 //====> singer section 
-$(".singerSection h3").one("click", function (e) {
-    // e.target==this
-    $(e.target).next().slideToggle(500)
-    $(".singerDesc").not($(e.target).next()).slideup(500)
-    // $(e.target).siblings().slideUp(500)
-
+$(".singerSection h3").on("click", function slideDown(e) {
+$(e.target).next().slideToggle(500);
+$(".singerDesc").not($(e.target).next()).slideUp(500)
 })
+
+
 // $(".leftMenu a").on("click", function (e) {
 //     $(e.target).attr('#active');
 //     $(e.target).siblings().removeAttr('#active') })
@@ -52,7 +51,7 @@ $(".singerSection h3").one("click", function (e) {
 
 //====> duration section
 function makeTimer() {
-    let endTime = new Date("9 february 2025 9:56:00");
+    let endTime = new Date("9 february 2025 8:00:00");
     endTime = (Date.parse(endTime) / 1000);
     let now = new Date();
     now = (Date.parse(now) / 1000);
@@ -66,7 +65,6 @@ function makeTimer() {
     $(".hours").text(hours)
     $(".minutes").text(minutes)
     $(".seconds").text(seconds)
-
 }
 setInterval(function () { makeTimer(); }, 1000);
 
@@ -84,6 +82,4 @@ $("textarea").on("keyup", function (e) {
     } else {
         $("#charsRemain").html(charsRemain)
     }
-
-
 })

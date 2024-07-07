@@ -147,7 +147,7 @@ aside .color-box:nth-child(3) {
 }
 
 aside .color-box:nth-child(4) {
-    background-color: var(--main-color);
+    background-color: goldenrod;
 }
 
 
@@ -181,7 +181,6 @@ aside .color-box:nth-child(4) {
     left: 0;
     padding-top: 40px;
     height: 100%;
-    /* width: 22%; */
     width: 0;
     overflow: hidden;
     background-color: rgb(17, 17, 17);
@@ -207,7 +206,6 @@ aside .color-box:nth-child(4) {
 }
 
 /* singer section  */
-
 #singer {
     width: 50%;
 }
@@ -239,7 +237,6 @@ aside .color-box:nth-child(4) {
 }
 
 /* contact section */
-
 #contact h2 {
     font-size: 35px;
 }
@@ -299,10 +296,3 @@ form span {
 .social-media ul li a {
     color: #999;
 }
-
-/* media */
-/* @media (max-width: 768px){
-    .social-media{
-        mb
-    }
-} */
