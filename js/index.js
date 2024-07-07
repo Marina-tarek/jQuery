@@ -21,7 +21,7 @@ $('a[href^="#"]').on("click", function (e) {
 
 //====> side color
 $('aside i').on("click", function () {
-    $('.sidebar-color').animate({ width: 'toggle', paddingInline: 'toggle' }, 1000)
+    $('.sidebar-color').animate({ width: 'toggle', paddingInline: 'toggle' }, 500)
     ///// another method give sidebar-color outer div to work on width only
 })
 $(".color-box").on("click", function (e) {
@@ -30,23 +30,22 @@ $(".color-box").on("click", function (e) {
 })
 //====> side menu
 $(".openSideList").on("click", function () {
-    $(".leftMenu").animate({ width: "22%" }, 1000)
-    $(".homeSection").animate({ width: "50%" }, 1000)
+    $(".leftMenu").animate({ width: "22%" }, 500)
+    $(".homeSection").animate({ width: "50%" }, 500)
+    $("#duration .container").animate({ width: "50%" }, 500)
+    $(".time").animate({ padding: "10" }, 500)
 })
 $(".closeBtn").on("click", function () {
-    $(".leftMenu").animate({ width: "0" }, 1000)
-    $(".homeSection").animate({ width: "100%" }, 1000)
+    $(".leftMenu").animate({ width: "0" }, 500)
+    $(".homeSection").animate({ width: "100%" }, 500)
+    $("#duration .container").animate({ width: "100%" }, 500)
+    $(".time").animate({ padding: "50" }, 500)
 })
 //====> singer section 
 $(".singerSection h3").on("click", function slideDown(e) {
 $(e.target).next().slideToggle(500);
 $(".singerDesc").not($(e.target).next()).slideUp(500)
 })
-
-
-// $(".leftMenu a").on("click", function (e) {
-//     $(e.target).attr('#active');
-//     $(e.target).siblings().removeAttr('#active') })
 
 
 //====> duration section
@@ -74,7 +73,7 @@ setInterval(function () { makeTimer(); }, 1000);
 $("textarea").on("keyup", function (e) {
     let maxlength = 100
     // let content=$('textarea').val()  to know value (what writen in textare)
-    let charsLenght = $('textarea').val().length  ///to know lenght
+    let charsLenght = $('textarea').val().length  ///to know lenght (number)
     let charsRemain = maxlength - charsLenght
     // console.log(charsRemain);
     if (charsRemain == 0) {
