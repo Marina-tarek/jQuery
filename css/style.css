@@ -5,7 +5,6 @@
     scroll-behavior: auto;
 }
 
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--main-color);
@@ -41,8 +40,8 @@ body {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-display: grid;
-place-content: center;
+    display: grid;
+    place-content: center;
 }
 
 .loader {
@@ -103,6 +102,55 @@ place-content: center;
     }
 }
 
+/* sidebar color */
+aside {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 99;
+    white-space: nowrap;
+}
+
+aside i {
+    background-color: #333;
+    color: var(--main-color);
+    padding: 10px;
+    transition: var(--trasition);
+}
+
+aside i:hover {
+    opacity: 0.8;
+}
+
+aside .sidebar-color {
+    background-color: #ccc;
+    padding: 10px;
+    display: none;
+}
+
+aside .color-box {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+}
+
+aside .color-box:nth-child(1) {
+    background-color: green;
+}
+
+aside .color-box:nth-child(2) {
+    background-color: #09c;
+}
+
+aside .color-box:nth-child(3) {
+    background-color: black;
+}
+
+aside .color-box:nth-child(4) {
+    background-color: var(--main-color);
+}
+
+
 /* home section */
 #home {
     background-image: url(/image/events-heavenly-header.jpg);
@@ -123,7 +171,7 @@ place-content: center;
     font-size: 60px;
 }
 
-.homeSection>.container>span {
+.homeContent span {
     font-size: 30px;
 }
 
@@ -150,7 +198,7 @@ place-content: center;
     transition: var(--trasition);
 }
 
-.active {
+#active {
     color: #D62E33;
 }
 

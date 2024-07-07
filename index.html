@@ -9,16 +9,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- google font -->
+
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="scroller">
+  <!-- loading screen -->
   <section class="loading">
     <span class="loader"></span>
   </section>
+  <!-- side box -->
+  <aside class="d-flex align-items-start">
+    <i class="fa-solid fa-gear cursor rounded-start-3"></i>
+    <div class="sidebar-color">
+      <h5 class="text-capitalize ">select color</h5>
+      <hr>
+      <div class="colors ">
+        <span class="color-box cursor"></span>
+        <span class="color-box cursor"></span>
+        <span class="color-box cursor"></span>
+        <span class="color-box cursor"></span>
+      </div>
+    </div>
+
+  </aside>
   <main>
     <section id="home" class="vh-100">
 
@@ -45,6 +61,7 @@
 
       </div>
     </section>
+    <!-- Singer Section -->
     <section id="singer" class="mx-auto main-pd">
       <div class="container text-center singerSection">
         <h3 class="cursor">ٍSinger one</h3>
@@ -93,39 +110,41 @@
       </div>
 
     </section>
+    <!-- Duration Section -->
     <section id="duration">
       <div class="layer">
         <div class="container main-pd">
-          <div class="row">
+          <div class="row gy-sm-3 gy-md-0">
             <div class="col-md-3">
-              <div class="time fw-medium fs-2">
-                <span class="days"></span><span>D</span>
+              <div class="time fw-medium fs-2 text-center">
+                <span class="days me-2"></span>D
               </div>
             </div>
             <div class="col-md-3">
-              <div class="time fw-medium fs-2">
-                <span class="hours"></span><span>H</span>
+              <div class="time fw-medium fs-2 text-center">
+                <span class="hours me-2"></span>H
               </div>
             </div>
             <div class="col-md-3">
-              <div class="time fw-medium fs-2">
-                <span class=" minutes"></span><span>m</span>
+              <div class="time fw-medium fs-2 text-center">
+                <span class="minutes me-2"></span>m
               </div>
             </div>
             <div class="col-md-3">
-              <div class="time fw-medium fs-2">
-                <span class="seconds"></span><span>S</span>
+              <div class="time fw-medium fs-2 text-center">
+                <span class="seconds me-2"></span>s
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Contact Us Section -->
     <section id="contact">
       <div class="container main-pd">
         <div class="title text-center mb-4">
           <h2 class="fw-bold mb-3 text-uppercase">join us</h2>
-          <p class="fw-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+          <p class="fw-light">Egyptian adventures like no other</p>
         </div>
         <div class="row">
           <div class="col-md-6 contact-info mb-sm-4 mb-md-0">
@@ -134,26 +153,28 @@
               ligula eget dolor. Aenean massa. Cum sociis natoque nascetur ridiculus mus.
             </p>
             <div class="detalis mb-5 mt-4">
-              <p class="mb-4"><i class="fa-solid fa-location-dot me-2"></i>New Street 22545, Nexa Road, New York City, USA</p>
+              <p class="mb-4"><i class="fa-solid fa-location-dot me-2"></i>New Street 22545, Nexa Road, New York City,
+                USA</p>
               <p class="main-color mb-4"><i class="fa-solid fa-envelope me-2"></i>hello@uigrid.com</p>
               <p class="mb-4"><i class="fa-solid fa-phone-flip me-2"></i>001-000-000-000</p>
             </div>
             <div class="social-media ">
               <ul class="list-unstyled d-flex gap-3">
-                <li ><a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter "></i></a></li>
-                <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://x.com/?lang=en" target="_blank"><i class="fa-brands fa-twitter "></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa-solid fa-volleyball"></i></a></li>
-                <li><a href="pinterest login"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="pinterest login" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6">
             <form action="">
               <input type="text" placeholder="Enter Name..." class="form-control rounded-0">
-              <input type="text" placeholder="Enter Email..." class="form-control rounded-0">
-              <textarea name="" id="" placeholder="Enter Message..." class="form-control rounded-0 "></textarea>
-              <p class="fs-6"> <span class="main-color">100 </span> Characyer Reamining</p>
+              <input type="email" placeholder="Enter Email..." class="form-control rounded-0">
+              <textarea name="" id="" placeholder="Enter Message..." class="form-control rounded-0 "
+                maxlength="100"></textarea>
+              <p class="fs-6"> <span class="main-color" id="charsRemain">100 </span> Characyer Reamining</p>
               <button class="btn text-uppercase rounded-0"> Send Message</button>
             </form>
           </div>
