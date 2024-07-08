@@ -29,18 +29,34 @@ $(".color-box").on("click", function (e) {
     $("h2,h3,span,a,.singerDesc").css('color', currentColorBg)
 })
 //====> side menu
-$(".openSideList").on("click", function () {
-    $(".leftMenu").animate({ width: "22%" }, 500)
-    $(".homeSection").animate({ width: "50%" }, 500)
-    $("#duration .container").animate({ width: "50%" }, 500)
-    $(".time").animate({ padding: "10" }, 500)
+$("#tap").on("click", function () {
+    if($('#tap').hasClass('open')){
+        $(".leftMenu").animate({ width: "22%" }, 500)
+        $(".homeSection").animate({ width: "50%" }, 500)
+        $("#duration .container").animate({ width: "50%" }, 500)
+        $(".time").animate({ padding: "10" }, 500)
+        $('#tap').html(` <i class="fa-solid fa-bars me-2"></i>Close`, 500)
+        $('#tap').toggleClass('open close',500)
+    }else{
+        $(".leftMenu").animate({ width: "0" }, 500)
+        $(".homeSection").animate({ width: "100%" }, 500)
+        $("#duration .container").animate({ width: "100%" }, 500)
+        $(".time").animate({ padding: "50" }, 500)
+        $('#tap').html(` <i class="fa-solid fa-bars me-2"></i>Open`, 500)
+        $('#tap').toggleClass('close open',500)
+    }
+    
+
 })
-$(".closeBtn").on("click", function () {
+$(".closeBtn").on("click", function close() {
     $(".leftMenu").animate({ width: "0" }, 500)
     $(".homeSection").animate({ width: "100%" }, 500)
     $("#duration .container").animate({ width: "100%" }, 500)
     $(".time").animate({ padding: "50" }, 500)
+    $('#tap').html(` <i class="fa-solid fa-bars me-2"></i>Open`, 500)
+    $('#tap').toggleClass('close open',500)
 })
+
 //====> singer section 
 $(".singerSection h3").on("click", function slideDown(e) {
 $(e.target).next().slideToggle(500);
