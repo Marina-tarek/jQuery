@@ -325,7 +325,7 @@ form span {
         width: 60%;
     }
 #duration .layer .container, #contact .container{
-    width: 80%;
+    width: 80%!important;
 }
     .time {
         padding: 30px;
